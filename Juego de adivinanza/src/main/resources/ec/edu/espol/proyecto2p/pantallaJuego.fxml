@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.controllers.PantallaJuegoController">
+   <top>
+      <HBox alignment="CENTER" prefHeight="73.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="68.0" fitWidth="89.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../img/logo1.png" />
+               </image>
+            </ImageView>
+            <Line endX="349.29290771484375" endY="0.7928932309150696" startX="-100.0" />
+            <ImageView fitHeight="68.0" fitWidth="89.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../img/logo2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="70.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="68.0" fitWidth="89.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../img/logo1.png" />
+               </image>
+            </ImageView>
+            <Line endX="354.29290771484375" endY="0.7928932309150696" startX="-100.0" />
+            <ImageView fitHeight="68.0" fitWidth="89.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../img/logo2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+   </bottom>
+   <left>
+      <GridPane prefHeight="195.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="168.0" minWidth="10.0" prefWidth="129.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="392.0" minWidth="10.0" prefWidth="371.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="194.0" minWidth="8.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="141.0" minHeight="6.0" prefHeight="58.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="175.0" minHeight="10.0" prefHeight="134.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="128.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="lblCantidadPreguntas" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Lucida Sans Unicode" size="17.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnSI" mnemonicParsing="false" onMouseClicked="#seleccionarSI" prefHeight="38.0" prefWidth="45.0" text="SI" GridPane.rowIndex="2" />
+            <Button fx:id="btnNO" mnemonicParsing="false" onMouseClicked="#seleccionarNO" prefHeight="35.0" prefWidth="43.0" text="NO" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label fx:id="lblPregunta" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnVisualizar" mnemonicParsing="false" onMouseClicked="#visualizarResultado" text="VISUALIZAR" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button fx:id="btnJugarAgain" mnemonicParsing="false" onMouseClicked="#jugarAgain" text="&gt;&lt;" GridPane.columnIndex="2" />
+         </children>
+      </GridPane>
+   </left>
+</BorderPane>
